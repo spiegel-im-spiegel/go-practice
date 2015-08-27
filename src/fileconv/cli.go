@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"io"
 	"os"
+
+	"fileconv/internal/binary"
+	"fileconv/internal/text"
 )
 
 // Exit codes are int values that represent an exit code for a particular error.
@@ -26,6 +29,7 @@ type CLI struct {
 // Run invokes the CLI with the given arguments.
 func (cli *CLI) Run(args []string) int {
 	var (
+		bin bool
 		out string //maybe file path
 	)
 
@@ -33,6 +37,7 @@ func (cli *CLI) Run(args []string) int {
 	flags := flag.NewFlagSet(Name, flag.ContinueOnError)
 	flags.SetOutput(cli.errStream)
 
+	flags.BoolVar(&bin, "bin", false, "binary mode")
 	flags.StringVar(&out, "out", "", "output file")
 
 	flVersion := flags.Bool("version", false, "Print version information and quit.")
@@ -86,7 +91,12 @@ func (cli *CLI) Run(args []string) int {
 		outfile = file
 	}
 
-	err := Conversion(infile, outfile)
+	var err error
+	if bin {
+		err = binary.Conversion(infile, outfile)
+	} else {
+		err = text.Conversion(infile, outfile)
+	}
 	if err != nil {
 		fmt.Fprintln(cli.errStream, err)
 		return ExitCodeError

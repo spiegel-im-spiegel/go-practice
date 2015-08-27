@@ -16,7 +16,7 @@ github.com/constabulary/gb/cmd/gb
 github.com/constabulary/gb/cmd/gb-vendor
 ```
 
-`go get` コマンドを使って導入するのではなく，普通に `git clone` して環境を作って下さい。ビルゴには `gb build` コマンドを使います。
+`go get` コマンドを使って導入するのではなく，普通に `git clone` して環境を作って下さい。ビルドには `gb build` コマンドを使います。
 
 ```shell
 C:\workspace>git clone https://github.com/spiegel-im-spiegel/go-practice.git
@@ -32,7 +32,6 @@ C:\workspace>cd go-practice
 C:\workspace\go-practice>gb build
 FATAL command "build" failed: failed to resolve import path "fileconv": cannot find package "golang.org/x/text/encoding/japanese" in any of:
         C:\Go\src\golang.org\x\text\encoding\japanese (from $GOROOT)
-
         C:\workspace\go-practice\src\golang.org\x\text\encoding\japanese (from $GOPATH)
         C:\workspace\go-practice\vendor\src\golang.org\x\text\encoding\japanese
 ```
@@ -97,6 +96,5 @@ C:\WORKSPACE\GO-PRACTICE
 再利用しようという奇特な方がおられるなら CC0 ライセンスでどうぞ。
 
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.ja)
-
 
 [gb]: http://getgb.io/ "gb - A project based build tool for Go"

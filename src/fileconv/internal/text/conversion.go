@@ -1,4 +1,4 @@
-package main
+package text
 
 import (
 	"bufio"
@@ -23,8 +23,7 @@ func Conversion(inStream io.Reader, outStream io.Writer) error {
 	//write to stream (UTF-8 to EUC-JP)
 	writer := bufio.NewWriter(transform.NewWriter(outStream, japanese.EUCJP.NewEncoder()))
 	for _, line := range list {
-		_, err := fmt.Fprintln(writer, line)
-		if err != nil {
+		if _, err := fmt.Fprintln(writer, line); err != nil {
 			return err
 		}
 	}

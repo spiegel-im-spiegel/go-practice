@@ -1,29 +1,25 @@
-# fileconv
+# fileconv : Golang による文字エンコーディング変換 - Qiita
 
+```shell
+fileconv [-version] [-bin] [-out <output file>] [<input file>]
 
-
-## Description
-
-## Usage
-
-## Install
-
-To install, use `go get`:
-
-```bash
-$ go get -d github.com/Spiegel/fileconv
+Usage of fileconv:
+  -bin
+        binary mode
+  -out string
+        output file
+  -version
+        Print version information and quit.
 ```
 
-## Contribution
+## 参考
 
-1. Fork ([https://github.com/Spiegel/fileconv/fork](https://github.com/Spiegel/fileconv/fork))
-1. Create a feature branch
-1. Commit your changes
-1. Rebase your local changes against the master branch
-1. Run test suite with the `go test ./...` command and confirm that it passes
-1. Run `gofmt -s`
-1. Create a new Pull Request
+- [Golang による文字エンコーディング変換 - Qiita](http://qiita.com/spiegel-im-spiegel/items/2e475b48226330aa5570)
 
-## Author
+Thanx @[tyochiai](http://qiita.com/tyochiai): [ShiftJIS -> EUC-JP by golang](https://gist.github.com/tyochiai/239c5433872e4c9cb517)
 
-[Spiegel](https://github.com/Spiegel)
+## ライセンス
+
+再利用しようという奇特な方がおられるなら CC0 ライセンスでどうぞ。
+
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.ja)
