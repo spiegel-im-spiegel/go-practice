@@ -1,2 +1,0 @@
-Take the Go-lang!
-Go 言語で行こう！
