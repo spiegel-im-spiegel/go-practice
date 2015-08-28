@@ -1,4 +1,4 @@
-# fileconv : Golang による文字エンコーディング変換 - Qiita
+# fileconv : Golang による文字エンコーディング変換
 
 ```shell
 fileconv [-version] [-bin] [-out <output file>] [<input file>]
