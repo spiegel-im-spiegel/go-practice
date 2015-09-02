@@ -1,15 +1,16 @@
 package main
 
-import "fmt"
-import "os"
+import (
+	"fmt"
+	"strings"
+
+	"github.com/spiegel-im-spiegel/gutil"
+)
 
 func main() {
 	msgs := []string {
 		"Take the Go-lang!",
 		"Go 言語で行こう！",
 	}
-	for _, msg := range msgs {
-		fmt.Fprintf(os.Stdout, "%s\r\n", msg)
-	}
-	//fmt.Println("Take the Go-lang!\r\nGo 言語で行こう！")
+	fmt.Println(strings.Join(msgs, gutil.LineEnding()))
 }
