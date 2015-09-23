@@ -23,7 +23,7 @@ func BenchmarkWriteBuffer1(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		content := WriteBuffer1(list)
-		_ = content
+		_ = string(content)
 	}
 }
 
@@ -32,7 +32,7 @@ func BenchmarkWriteBuffer1Cap128(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		content := WriteBuffer1Cap128(list)
-		_ = content
+		_ = string(content)
 	}
 }
 
@@ -41,7 +41,7 @@ func BenchmarkWriteBuffer1Cap1K(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		content := WriteBuffer1Cap1K(list)
-		_ = content
+		_ = string(content)
 	}
 }
 
@@ -50,7 +50,7 @@ func BenchmarkWriteBuffer2(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		content := WriteBuffer2(list)
-		_ = content
+		_ = string(content)
 	}
 }
 
@@ -59,7 +59,7 @@ func BenchmarkWriteBuffer2Cap128(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		content := WriteBuffer2Cap128(list)
-		_ = content
+		_ = string(content)
 	}
 }
 
@@ -68,6 +68,6 @@ func BenchmarkWriteBuffer2Cap1K(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		content := WriteBuffer2Cap1K(list)
-		_ = content
+		_ = string(content)
 	}
 }
